@@ -1313,3 +1313,188 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3429.584263 seconds.
+  path: Assets/Models/PushButton.fbx
+  artifactKey: Guid(88290212fbce2154a9134ca5326b8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/PushButton.fbx using Guid(88290212fbce2154a9134ca5326b8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b66032d1b52a6ddbcd74b331da0386af') in 0.126108 seconds 
+  Import took 0.130539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 71.910682 seconds.
+  path: Assets/Models/PushButton.fbx
+  artifactKey: Guid(88290212fbce2154a9134ca5326b8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/PushButton.fbx using Guid(88290212fbce2154a9134ca5326b8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29f82eed6403fa0897fad0ff664c377d') in 0.084545 seconds 
+  Import took 0.088573 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 63.496022 seconds.
+  path: Assets/Materials/Black.mat
+  artifactKey: Guid(18965bbffb4f08c43a1988975c84834d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Black.mat using Guid(18965bbffb4f08c43a1988975c84834d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f373a71e818618260c29b90a94c33c3') in 0.024554 seconds 
+  Import took 0.046431 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Materials/Pink.mat
+  artifactKey: Guid(036697ecc6b6dcd4aaca8f1c9ee1f1d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Pink.mat using Guid(036697ecc6b6dcd4aaca8f1c9ee1f1d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84a4052d7754feb61344db4f77882adb') in 0.032953 seconds 
+  Import took 0.036549 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003967 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.234 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1234ms)
+		BeginReloadAssembly (130ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (1027ms)
+			LoadAssemblies (106ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (342ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (407ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (91ms)
+				ProcessInitializeOnLoadAttributes (288ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2400 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.2 MB.
+System memory in use after: 118.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2974.
+Total: 3.780200 ms (FindLiveObjects: 0.260900 ms CreateObjectMapping: 0.066400 ms MarkObjects: 3.427400 ms  DeleteObjects: 0.024500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 215.900707 seconds.
+  path: Assets/Models/PushButton.fbx
+  artifactKey: Guid(88290212fbce2154a9134ca5326b8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/PushButton.fbx using Guid(88290212fbce2154a9134ca5326b8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf5c1b10a3f75ca2a94432b45be13ecf') in 0.109102 seconds 
+  Import took 0.113859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 121.227561 seconds.
+  path: Assets/Materials/push-me-texture.png
+  artifactKey: Guid(47626370d0d53a14ab9f694683ed20b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/push-me-texture.png using Guid(47626370d0d53a14ab9f694683ed20b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc03bcffdeaf55415b39c81a351fff59') in 0.049724 seconds 
+  Import took 0.053843 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.682454 seconds.
+  path: Assets/Materials/PushMeMat.mat
+  artifactKey: Guid(f825efcd8fd8cbe4c9c77eecb683a233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/PushMeMat.mat using Guid(f825efcd8fd8cbe4c9c77eecb683a233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f2c2e5936ff53acbedc939c25ccf4da') in 0.025852 seconds 
+  Import took 0.029830 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 59.827813 seconds.
+  path: Assets/Materials/push-me-texture.png
+  artifactKey: Guid(47626370d0d53a14ab9f694683ed20b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/push-me-texture.png using Guid(47626370d0d53a14ab9f694683ed20b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d68ea9d7e647e380039222546397e30') in 0.021452 seconds 
+  Import took 0.025673 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004056 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.242 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1243ms)
+		BeginReloadAssembly (137ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (39ms)
+		EndReloadAssembly (1029ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (342ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (412ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (90ms)
+				ProcessInitializeOnLoadAttributes (293ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2400 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.2 MB.
+System memory in use after: 118.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2978.
+Total: 4.326300 ms (FindLiveObjects: 0.243500 ms CreateObjectMapping: 0.069200 ms MarkObjects: 3.972500 ms  DeleteObjects: 0.039500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 60.276197 seconds.
+  path: Assets/Materials/PushMeMat.mat
+  artifactKey: Guid(f825efcd8fd8cbe4c9c77eecb683a233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/PushMeMat.mat using Guid(f825efcd8fd8cbe4c9c77eecb683a233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17cb85c5200367c6773139dbdc3639fc') in 0.073406 seconds 
+  Import took 0.077984 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
