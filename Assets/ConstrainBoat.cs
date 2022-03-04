@@ -30,8 +30,9 @@ public class ConstrainBoat : MonoBehaviour
 
     void FixedUpdate()
     {   
+        /*
         // Constrain x position 
-        // transform.position = new Vector3(Mathf.Clamp(transform.position.x, xPositionConstrain, xPositionConstrain), transform.position.y, transform.position.z);
+         transform.position = new Vector3(Mathf.Clamp(transform.position.x, xPositionConstrain, xPositionConstrain), transform.position.y, transform.position.z);
         if (transform.position.x > xPositionConstrain)
         { 
             transform.position = new Vector3(xPositionConstrain, transform.position.y, transform.position.z);
@@ -40,6 +41,7 @@ public class ConstrainBoat : MonoBehaviour
         { 
             transform.position = new Vector3(-xPositionConstrain, transform.position.y, transform.position.z);
         }
+        */
 
         // If boat falls behind the camera, set boatCapsized to true
         if (transform.position.z < Camera.main.transform.position.z)
