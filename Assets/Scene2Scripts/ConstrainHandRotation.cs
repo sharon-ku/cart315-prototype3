@@ -4,38 +4,22 @@ using UnityEngine;
 
 public class ConstrainHandRotation : MonoBehaviour
 {
-    [Header("Limit Rot")]
-    public float minZRot = -3f;
-    public float maxZRot = 7f;
-
-    public float minYRot = -3f;
-    public float maxYRot = 7f;
-
-
-    // Private vars
-    private Vector3 mousePos;
-    private Transform localTrans;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        localTrans = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        this.transform.Rotate(0, 0, 0f);
+        // Set rotation to specific values
+        // When using RigidBody, there's this issue where the hand wants to do crazy rotations
+        // This function thus prevents it from doing unwanted acrobatics
+        if (transform.rotation != Quaternion.Euler(new Vector3(-90, 180, 0)))
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(-90, 180, 0));
+        }
     }
 
-    public void LimitRot()
-    {
-        Vector3 playerEulerAngles = localTrans.rotation.eulerAngles;
-
-        playerEulerAngles.z = (playerEulerAngles.z > 180) ? playerEulerAngles.z - 360 : playerEulerAngles.z;
-        playerEulerAngles.z = Mathf.Clamp(playerEulerAngles.z, minZRot, maxZRot);
-
-        localTrans.rotation = Quaternion.Euler(playerEulerAngles);
-    }
 }

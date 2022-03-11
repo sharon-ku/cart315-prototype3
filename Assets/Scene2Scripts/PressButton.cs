@@ -29,8 +29,6 @@ public class PressButton : MonoBehaviour
 
             // Play sound effect
             barkSound.Play();
-
-            this.GetComponent<Rigidbody>().AddForce(0, 1000, 0);
         }
     }
 }

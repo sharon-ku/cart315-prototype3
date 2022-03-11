@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveHand : MonoBehaviour
+public class SlapHand : MonoBehaviour
 {
     [Header("Forces")]
     // rotation speed: UNUSED
@@ -37,65 +37,13 @@ public class MoveHand : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // Take care of movement (with arrow keys or WASD)
-        HandleMovement();
-
+    
         // Slap hand down
         HandleSlapping();
 
-        // Set rotation to specific values
-        RestrictRotation();
-
     }
 
-    // Set rotation to specific values
-    // When using RigidBody, there's this issue where the hand wants to do crazy rotations
-    // This function thus prevents it from doing unwanted acrobatics
-    void RestrictRotation()
-    {
-        if (transform.rotation != Quaternion.Euler(new Vector3(-90, 180, 0)))
-        {
-            transform.rotation = Quaternion.Euler(new Vector3(-90, 180, 0));
-        }
-    }
-
-    // Take care of movement (with arrow keys or WASD)
-    void HandleMovement()
-    {
-        // Move right
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-        {
-            // this.GetComponent<Transform>().Rotate(0, 0, rotationSpeed);
-            this.GetComponent<Rigidbody>().velocity = new Vector3(sidePushingForce, 0, 0);
-        }
-
-        // Move left
-        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-        {
-            // this.GetComponent<Transform>().Rotate(0, 0, -rotationSpeed);
-            this.GetComponent<Rigidbody>().velocity = new Vector3(-sidePushingForce, 0, 0);
-        }
-
-        // Move front
-        else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
-        {
-            // this.GetComponent<Transform>().Rotate(0, 0, rotationSpeed);
-            this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, sidePushingForce);
-        }
-
-        // Move back
-        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
-        {
-            // this.GetComponent<Transform>().Rotate(0, 0, rotationSpeed);
-            this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, -sidePushingForce);
-        }
-
-        // No movement
-        else
-        {
-            this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-        }
-    }
+   
 
     // Handle hand slapping down and going back up (with space bar or mouse click)
     void HandleSlapping()
