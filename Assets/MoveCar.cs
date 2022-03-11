@@ -25,24 +25,34 @@ public class MoveCar : MonoBehaviour
         }
 
         // Move left
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             this.GetComponent<Transform>().Rotate(0, 0, -rotationSpeed);
             this.GetComponent<Rigidbody>().AddForce(-sidePushingForce, 0, 0);
         }
 
         // Move front
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             // this.GetComponent<Transform>().Rotate(0, 0, rotationSpeed);
             this.GetComponent<Rigidbody>().AddForce(0, 0, sidePushingForce);
         }
 
         // Move back
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             // this.GetComponent<Transform>().Rotate(0, 0, rotationSpeed);
             this.GetComponent<Rigidbody>().AddForce(0, 0, -sidePushingForce);
+        }
+
+        else
+        {
+            if (transform.position.y <= -3.18f)
+            { 
+                // this.GetComponent<Rigidbody>().AddForce(0, 0, 0);
+                //this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                this.GetComponent<Rigidbody>().velocity *= 0.9f;
+            }
         }
 
     }

@@ -24,10 +24,15 @@ public class RotateBoat : MonoBehaviour
             this.GetComponent<Rigidbody>().AddForce(sidePushingForce, 0, 0);
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             this.GetComponent<Transform>().Rotate(0, 0, -rotationSpeed);
             this.GetComponent<Rigidbody>().AddForce(-sidePushingForce, 0, 0);
+        }
+
+        else
+        {
+            this.GetComponent<Rigidbody>().AddForce(0, 0, 0);
         }
 
     }

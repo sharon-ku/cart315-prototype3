@@ -42,7 +42,9 @@ public class MoveHand : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             // this.GetComponent<Transform>().Rotate(0, 0, rotationSpeed);
-            this.GetComponent<Rigidbody>().AddForce(0, 0, -sidePushingForce);
+            // this.GetComponent<Rigidbody>().AddForce(0, 0, -sidePushingForce);
+
+            // this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
 
     }
