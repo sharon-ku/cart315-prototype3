@@ -16,7 +16,7 @@ public class MoveHand : MonoBehaviour
     Vector3 position;
 
     // initial y position of hand
-    public float initialYPosition = 1.86f;
+    public float initialYPosition = 3.39f;
 
 
     // Start is called before the first frame update
@@ -42,6 +42,21 @@ public class MoveHand : MonoBehaviour
 
         // Slap hand down
         HandleSlapping();
+
+        // Set rotation to specific values
+        RestrictRotation();
+
+    }
+
+    // Set rotation to specific values
+    // When using RigidBody, there's this issue where the hand wants to do crazy rotations
+    // This function thus prevents it from doing unwanted acrobatics
+    void RestrictRotation()
+    {
+        if (transform.rotation != Quaternion.Euler(new Vector3(-90, 180, 0)))
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(-90, 180, 0));
+        }
     }
 
     // Take care of movement (with arrow keys or WASD)
