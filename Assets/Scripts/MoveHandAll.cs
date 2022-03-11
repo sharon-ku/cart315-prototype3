@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlapHand : MonoBehaviour
+public class MoveHandAll : MonoBehaviour
 {
     [Header("Forces")]
     // rotation speed: UNUSED
@@ -21,7 +21,7 @@ public class SlapHand : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {   
+    {
         // Put hand at starting y position
         ResetYPosition();
     }
@@ -37,23 +37,34 @@ public class SlapHand : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-    
+
         // Slap hand down
         HandleSlapping();
 
+        // Set rotation to specific values
+        // When using RigidBody, there's this issue where the hand wants to do crazy rotations
+        // This function thus prevents it from doing unwanted acrobatics
+        if (transform.rotation != Quaternion.Euler(new Vector3(-90, 180, 0)))
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(-90, 180, 0));
+        }
+
+
     }
 
-   
+
 
     // Handle hand slapping down and going back up (with space bar or mouse click)
     void HandleSlapping()
     {
         // Press down: either with space bar or on mouse click
-        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        // if (Input.GetKey(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (Input.GetKey(KeyCode.Space))
         {
+            Debug.Log("slapping");
             // Slap hand down
-            this.GetComponent<Rigidbody>().velocity = new Vector3(0, -slapForce, 0);
-       
+            this.GetComponent<Rigidbody>().velocity = new Vector3(0, -35f, 0);
+
             // After delay of __ seconds, reset y position
             Invoke("ResetYPosition", 0.1f);
         }
@@ -61,15 +72,17 @@ public class SlapHand : MonoBehaviour
         // If done slapping, then put hand back up
         // if (transform.position.y <= 0)
         // {
-          
-            // // Stop moving hand
-            // // this.GetComponent<Rigidbody>().AddForce(0, 0, 0);
-            // // this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
 
-            // // Put hand at starting y position, aka move it back up
-            // ResetYPosition();
-            
+        // // Stop moving hand
+        // // this.GetComponent<Rigidbody>().AddForce(0, 0, 0);
+        // // this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+
+        // // Put hand at starting y position, aka move it back up
+        // ResetYPosition();
+
         // }
+
+        
     }
 
 }
