@@ -105,17 +105,23 @@ public class MoveHand : MonoBehaviour
         {
             // Slap hand down
             this.GetComponent<Rigidbody>().velocity = new Vector3(0, -slapForce, 0);
+       
+            // After delay of __ seconds, reset y position
+            Invoke("ResetYPosition", 0.1f);
         }
 
         // If done slapping, then put hand back up
-        if (transform.position.y <= 0)
-        {
-            // Put hand at starting y position, aka move it back up
-            ResetYPosition();
-            // Stop moving hand
-            this.GetComponent<Rigidbody>().AddForce(0, 0, 0);
-            this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-        }
+        // if (transform.position.y <= 0)
+        // {
+          
+            // // Stop moving hand
+            // // this.GetComponent<Rigidbody>().AddForce(0, 0, 0);
+            // // this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+
+            // // Put hand at starting y position, aka move it back up
+            // ResetYPosition();
+            
+        // }
     }
 
 }
