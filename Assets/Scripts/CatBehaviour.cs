@@ -5,6 +5,9 @@ using UnityEngine;
 public class CatBehaviour : MonoBehaviour
 {
     public GameObject hand;
+    public GameObject sleepingHead;
+    private float closeDistanceToHead = 7f;
+
     // State of cat being on top of the hand
     private bool onTopOfHand = false;
     // Number of times hand hit cat
@@ -35,6 +38,57 @@ public class CatBehaviour : MonoBehaviour
         {
             // Assign cat to hand position, with some offset
             transform.position = hand.transform.position + new Vector3(0, handThickness, zOffsetToHand);
+
+            CatCloseToHead();
+
+            CatTransferToHead();
+           
+        }
+
+       
+       
+    }
+
+    // Move cat to top of head
+    public void CatTransferToHead()
+    {
+        
+
+        //if (sleepingHead.handHitFace)
+        //{
+        //    Debug.Log("cat on face now");
+
+        //    // Assign cat to hand position, with some offset
+        //    transform.position = sleepingHead.transform.position + new Vector3(0, handThickness, zOffsetToHand);
+        //}
+    }
+
+    private void CatCloseToHead()
+    {
+        // Calculate the distance between road and special car
+        float distanceToHead = Vector3.Distance(sleepingHead.transform.position, transform.position);
+
+        // If cat is close to the head, keep meowing
+        if (distanceToHead < closeDistanceToHead)
+        {
+
+
+            // Play sound effect
+            // soundEffect.Play();
+
+            // Make cat meow a LOT
+            //soundEffect.loop = true;
+            //soundEffect.Play();
+
+            Debug.Log("close to head");
+
+        }
+        else
+        {
+            // Stop playing sound effect
+            //soundEffect.Stop();
+            //soundEffect.loop = false;
+            Debug.Log("no head");
         }
     }
 

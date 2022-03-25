@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class MoveHand : MonoBehaviour
 {
+
+    public GameObject egg;
+    public GameObject spike;
+    public GameObject tissue;
+
+    public bool stuckToHand;
+
     [Header("Forces")]
     // rotation speed: UNUSED
     public float rotationSpeed = 0.3f;
@@ -116,7 +123,6 @@ public class MoveHand : MonoBehaviour
     {
         // Slap hand down
         HandleSlapping();
-
     }
 
 
@@ -142,7 +148,23 @@ public class MoveHand : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        GameObject go = GameObject.Find("Tissue");
+        TissueCollision cs = go.GetComponent<TissueCollision>();
+        bool thisTissueCollision = cs.stuckToHand;
+
+        Debug.Log(thisTissueCollision);
+
+        if (collision.collider.gameObject == spike && thisTissueCollision)
+        {
+            // Show egg
+            egg.SetActive(true);
+
+            // Hide spike
+            spike.SetActive(false);
+
+            // Hide tissue
+            tissue.GetComponent<Renderer>().enabled = false;
+        }
     }
 }
 

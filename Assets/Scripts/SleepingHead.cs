@@ -12,7 +12,7 @@ public class SleepingHead : MonoBehaviour
     // Sound effect
     public AudioSource snoreSound;
 
-    private bool handHitFace = false;
+    public bool handHitFace = false;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +42,8 @@ public class SleepingHead : MonoBehaviour
                 // Tissue gets transferred to face
                 handHitFace = true;
 
-       
+                // After delay of __ seconds, reset y position
+                Invoke("handNotHitFace", 0.1f);
 
                 // Ignore collision between hand and tissue
                 // Physics.IgnoreCollision(hand.GetComponent<Collider>(), GetComponent<Collider>());
@@ -51,4 +52,11 @@ public class SleepingHead : MonoBehaviour
 
         }
     }
+
+    // Reset hand hitting face to false
+    private void HandNotHitFace()
+    {
+        handHitFace = false;
+    }
+
 }

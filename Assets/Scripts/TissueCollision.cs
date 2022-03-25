@@ -5,10 +5,13 @@ using UnityEngine;
 public class TissueCollision : MonoBehaviour
 {
     public GameObject hand;
+    public GameObject spike;
+
+
     // Sound effect
     public AudioSource soundEffect;
 
-    private bool stuckToHand = false;
+    public bool stuckToHand = false;
 
     static bool tissueHitFace = false;
 
@@ -55,6 +58,15 @@ public class TissueCollision : MonoBehaviour
             } 
 
             
+        }
+
+        if (collision.collider.gameObject == spike)
+        {
+            Debug.Log("tissue spike");
+
+            
+
+
         }
     }
 }
