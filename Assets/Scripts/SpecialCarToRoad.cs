@@ -36,7 +36,6 @@ public class SpecialCarToRoad : MonoBehaviour
         //transform.position = new Vector3(6.53f, -26.93161f, 27.84081f);
         //}
 
-        Debug.Log(transform.position);
 
         // Set rotation to specific values
         // When using RigidBody, there's this issue where the hand wants to do crazy rotations
@@ -72,9 +71,6 @@ public class SpecialCarToRoad : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3(-90, 0, 0));
 
             driving = true;
-
-            Debug.Log(transform.position);
-
         }
     }
 }

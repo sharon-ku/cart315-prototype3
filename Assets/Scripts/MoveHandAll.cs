@@ -44,6 +44,7 @@ public class MoveHandAll : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(new Vector3(-90, 180, 0));
         }
+
     }
 
     private void Update()
@@ -58,7 +59,7 @@ public class MoveHandAll : MonoBehaviour
     void HandleSlapping()
     {
         // Press down: either with space bar or on mouse click
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
         {
             Debug.Log("slapping");
             // Slap hand down

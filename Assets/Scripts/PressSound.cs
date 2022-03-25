@@ -28,7 +28,8 @@ public class PressSound : MonoBehaviour
             Debug.Log("SLAPPED");
 
             // Play sound effect
-            soundEffect.Play();
+            soundEffect.PlayOneShot(soundEffect.clip);
+
         }
     }
 }
