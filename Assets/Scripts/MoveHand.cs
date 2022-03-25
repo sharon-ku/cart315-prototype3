@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveControls : MonoBehaviour
+public class MoveHand : MonoBehaviour
 {
     [Header("Forces")]
     // rotation speed: UNUSED
