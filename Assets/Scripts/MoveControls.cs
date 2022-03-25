@@ -14,7 +14,7 @@ public class MoveControls : MonoBehaviour
     public AudioSource soundEffect;
 
 
-    private bool tissueHitFace = false;
+    private bool handHitFace = false;
 
     // Start is called before the first frame update
     void Start()
@@ -71,15 +71,15 @@ public class MoveControls : MonoBehaviour
     {
         if (collision.collider.gameObject == face)
         {
-            Debug.Log("tissue on face");
+            Debug.Log("hand on face");
 
-            if (!tissueHitFace)
+            if (!handHitFace)
             {
                 // Play sound effect
                 soundEffect.Play();
 
                 // Tissue gets transferred to face
-                tissueHitFace = true;
+                handHitFace = true;
 
 
 
