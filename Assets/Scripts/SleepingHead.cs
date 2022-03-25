@@ -29,11 +29,11 @@ public class SleepingHead : MonoBehaviour
         {
             Debug.Log("tissue on face");
 
+            // Play sound effect
+            soundEffect.Play();
+
             if (!tissueHitFace)
             {
-                // Play sound effect
-                soundEffect.Play();
-
                 // Tissue gets transferred to face
                 tissueHitFace = true;
 

@@ -37,10 +37,6 @@ public class MoveHandAll : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
-        // Slap hand down
-        HandleSlapping();
-
         // Set rotation to specific values
         // When using RigidBody, there's this issue where the hand wants to do crazy rotations
         // This function thus prevents it from doing unwanted acrobatics
@@ -48,7 +44,12 @@ public class MoveHandAll : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(new Vector3(-90, 180, 0));
         }
+    }
 
+    private void Update()
+    {
+        // Slap hand down
+        HandleSlapping();
 
     }
 
@@ -57,8 +58,7 @@ public class MoveHandAll : MonoBehaviour
     void HandleSlapping()
     {
         // Press down: either with space bar or on mouse click
-        // if (Input.GetKey(KeyCode.Space) || Input.GetMouseButtonDown(0))
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             Debug.Log("slapping");
             // Slap hand down
@@ -67,8 +67,6 @@ public class MoveHandAll : MonoBehaviour
             // After delay of __ seconds, reset y position
             Invoke("ResetYPosition", 0.1f);
         }
-
-
     }
 
 }
