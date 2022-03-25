@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class SleepingHead : MonoBehaviour
 {
-    public GameObject tissue;
+    public GameObject hand;
 
     // Sound effect
     public AudioSource soundEffect;
 
-    private bool tissueHitFace = false;
+    // Sound effect
+    public AudioSource snoreSound;
+
+    private bool handHitFace = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Play nore esound
+        snoreSound.Play();
+        // snoreSound.PlayOneShot(snoreSound.clip);
     }
 
     // Update is called once per frame
@@ -25,17 +30,17 @@ public class SleepingHead : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.gameObject == tissue)
+        if (collision.collider.gameObject == hand)
         {
-            Debug.Log("tissue on face");
+            Debug.Log("hand on face");
 
             // Play sound effect
             soundEffect.Play();
 
-            if (!tissueHitFace)
+            if (!handHitFace)
             {
                 // Tissue gets transferred to face
-                tissueHitFace = true;
+                handHitFace = true;
 
        
 

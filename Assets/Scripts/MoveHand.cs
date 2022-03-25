@@ -22,10 +22,6 @@ public class MoveHand : MonoBehaviour
     // force for moving left, right, front, back
     public float movementSpeed = 15f;
 
-    public GameObject face;
-
-    private bool handHitFace = false;
-
     private bool slapping = false;
 
     // Sound effect
@@ -146,26 +142,7 @@ public class MoveHand : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.gameObject == face)
-        {
-            Debug.Log("hand on face");
-
-            if (!handHitFace)
-            {
-                // Play sound effect
-                soundEffect.Play();
-
-                // Tissue gets transferred to face
-                handHitFace = true;
-
-
-
-                // Ignore collision between hand and tissue
-                // Physics.IgnoreCollision(hand.GetComponent<Collider>(), GetComponent<Collider>());
-            }
-
-
-        }
+        
     }
 }
 

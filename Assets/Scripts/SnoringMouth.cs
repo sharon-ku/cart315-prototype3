@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SnoringMouth : MonoBehaviour
 {
- 
+
     public float minWidth = 0.56f;
     public float maxWidth = 1;
     public float growthSpeed = 0.005f;
@@ -25,7 +25,7 @@ public class SnoringMouth : MonoBehaviour
         if (transform.localScale.x <= minWidth || transform.localScale.x >= maxWidth)
         {
             scaleChange = -scaleChange;
-     
+
         }
     }
 }
