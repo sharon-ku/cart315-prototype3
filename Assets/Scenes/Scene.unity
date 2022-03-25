@@ -19878,12 +19878,7 @@ MonoBehaviour:
     Move: WASD / arrow keys
 
     Slap:
-    space bar
-
-
-    For the sake of humanity
-
-'
+    click / space bar'
 --- !u!222 &1986061490
 CanvasRenderer:
   m_ObjectHideFlags: 0
