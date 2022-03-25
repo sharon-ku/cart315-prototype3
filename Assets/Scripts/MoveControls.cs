@@ -23,33 +23,38 @@ public class MoveControls : MonoBehaviour
         {
             // this.GetComponent<Transform>().Rotate(0, 0, rotationSpeed);
             this.GetComponent<Rigidbody>().velocity = new Vector3(movementSpeed, 0, 0);
+            // this.GetComponent<Rigidbody>().AddForce(movementSpeed, 0, 0);
         }
 
         // Move left
-        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             // this.GetComponent<Transform>().Rotate(0, 0, -rotationSpeed);
             this.GetComponent<Rigidbody>().velocity = new Vector3(-movementSpeed, 0, 0);
+           //  this.GetComponent<Rigidbody>().AddForce(-movementSpeed, 0, 0);
         }
 
         // Move front
-        else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             // this.GetComponent<Transform>().Rotate(0, 0, rotationSpeed);
             this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, movementSpeed);
+           //  this.GetComponent<Rigidbody>().AddForce(0, 0, movementSpeed);
         }
 
         // Move back
-        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             // this.GetComponent<Transform>().Rotate(0, 0, rotationSpeed);
             this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, -movementSpeed);
+           //  this.GetComponent<Rigidbody>().AddForce(0, 0, -movementSpeed);
         }
 
         // No movement
-        else
+        if (!Input.anyKey)
         {
             this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+         
         }
     }
 }
