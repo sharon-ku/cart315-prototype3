@@ -68,19 +68,6 @@ public class MoveHandAll : MonoBehaviour
             Invoke("ResetYPosition", 0.1f);
         }
 
-        // If done slapping, then put hand back up
-        // if (transform.position.y <= 0)
-        // {
-
-        // // Stop moving hand
-        // // this.GetComponent<Rigidbody>().AddForce(0, 0, 0);
-        // // this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-
-        // // Put hand at starting y position, aka move it back up
-        // ResetYPosition();
-
-        // }
-
 
     }
 
