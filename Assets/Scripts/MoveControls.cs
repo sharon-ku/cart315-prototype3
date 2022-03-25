@@ -8,6 +8,14 @@ public class MoveControls : MonoBehaviour
     // force for moving left, right, front, back
     public float movementSpeed = 15f;
 
+    public GameObject face;
+
+    // Sound effect
+    public AudioSource soundEffect;
+
+
+    private bool tissueHitFace = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +63,31 @@ public class MoveControls : MonoBehaviour
         {
             this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
          
+        }
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.gameObject == face)
+        {
+            Debug.Log("tissue on face");
+
+            if (!tissueHitFace)
+            {
+                // Play sound effect
+                soundEffect.Play();
+
+                // Tissue gets transferred to face
+                tissueHitFace = true;
+
+
+
+                // Ignore collision between hand and tissue
+                // Physics.IgnoreCollision(hand.GetComponent<Collider>(), GetComponent<Collider>());
+            }
+
+
         }
     }
 }

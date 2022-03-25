@@ -10,6 +10,8 @@ public class TissueCollision : MonoBehaviour
 
     private bool stuckToHand = false;
 
+    static bool tissueHitFace = false;
+
     [Header("Position offset to hand")]
     // y (height) offset (moves it lower)
     public float handThickness = 2.5f;
@@ -26,7 +28,7 @@ public class TissueCollision : MonoBehaviour
     void FixedUpdate()
     {   
         // If tissue is stuck to hand:
-        if (stuckToHand)
+        if (stuckToHand && !tissueHitFace)
         {
             // Assign tissue to hand position, with some offset
             transform.position = hand.transform.position + new Vector3(0, -handThickness, zOffsetToHand);
