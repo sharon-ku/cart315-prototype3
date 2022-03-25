@@ -53,7 +53,6 @@ public class MoveHandAll : MonoBehaviour
     }
 
 
-
     // Handle hand slapping down and going back up (with space bar or mouse click)
     void HandleSlapping()
     {

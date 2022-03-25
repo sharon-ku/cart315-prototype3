@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressButton : MonoBehaviour
+public class PressSound : MonoBehaviour
 {
     public GameObject hand;
     // Sound effect
-    public AudioSource barkSound;
+    public AudioSource soundEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +25,10 @@ public class PressButton : MonoBehaviour
     {
         if (collision.collider.gameObject == hand)
         {
-            Debug.Log("BUTTON PRESSED");
+            Debug.Log("SLAPPED");
 
             // Play sound effect
-            barkSound.Play();
+            soundEffect.Play();
         }
     }
 }

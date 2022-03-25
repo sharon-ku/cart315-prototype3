@@ -6,7 +6,7 @@ public class MoveControls : MonoBehaviour
 {
 
     // force for moving left, right, front, back
-    public float movementSpeed = 10f;
+    public float movementSpeed = 15f;
 
     // Start is called before the first frame update
     void Start()
