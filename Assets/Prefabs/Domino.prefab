@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2feba0b4f6f3164386f4936f2b5f2b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hand: {fileID: 0}
+  hand: {fileID: 403199824584377035, guid: 595d9cf184ed9fc4fad968df286b02bb, type: 3}
   soundEffect: {fileID: 5673599423280434318}
 --- !u!82 &5673599423280434318
 AudioSource:
@@ -124,7 +124,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1e829c35452f6b04497fb6fe6df64e84, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.139
+  m_Volume: 0.06
   m_Pitch: 1
   Loop: 0
   Mute: 0
