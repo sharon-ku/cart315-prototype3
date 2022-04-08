@@ -14730,7 +14730,7 @@ PrefabInstance:
     - target: {fileID: 5903155879230293045, guid: fe8cfb8bee841eb499cb88b674e17231, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 85d5321e340775e428131ad4d6866af1, type: 2}
+      objectReference: {fileID: 2100000, guid: 1bd2868230a287b4cb7ddd782a365802, type: 2}
     - target: {fileID: 6951221679581875450, guid: fe8cfb8bee841eb499cb88b674e17231, type: 3}
       propertyPath: hand
       value: 
@@ -20488,10 +20488,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 919132148751318023}
-  sleepingHead: {fileID: 1806943051}
+  sleepingHead: {fileID: 174198920}
   soundEffect: {fileID: 919132148036203013}
   handThickness: 2.5
   zOffsetToHand: 2
+  headThickness: 2.2
 --- !u!65 &919132148036203016
 BoxCollider:
   m_ObjectHideFlags: 0

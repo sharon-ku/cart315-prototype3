@@ -6,7 +6,7 @@ public class CatBehaviour : MonoBehaviour
 {
     public GameObject hand;
     public GameObject sleepingHead;
-    private float closeDistanceToHead = 7f;
+    private float closeDistanceToHead = 10f;
 
     // State of cat being on top of the hand
     private bool onTopOfHand = false;
@@ -19,8 +19,10 @@ public class CatBehaviour : MonoBehaviour
     [Header("Position offset to hand")]
     // y (height) offset (moves it lower)
     public float handThickness = 2.5f;
-    // z offset (moves it up the fingers)
+    // z offset to hand (moves it up the fingers)
     public float zOffsetToHand = 2f;
+    // y offset to head (moves it lower)
+    public float headThickness = 2.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,7 @@ public class CatBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         // If cat on top of hand:
         if (onTopOfHand && numHits >=1)
@@ -70,11 +72,12 @@ public class CatBehaviour : MonoBehaviour
 
         // If cat is close to the head, keep meowing
         if (distanceToHead < closeDistanceToHead)
-        {
-
+        {   
+            // Move cat to top of face
+            transform.position = sleepingHead.transform.position + new Vector3(0, headThickness, zOffsetToHand);
 
             // Play sound effect
-            // soundEffect.Play();
+            soundEffect.Play();
 
             // Make cat meow a LOT
             //soundEffect.loop = true;
