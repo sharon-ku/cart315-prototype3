@@ -13,6 +13,9 @@ public class CatBehaviour : MonoBehaviour
     // Number of times hand hit cat
     private float numHits = 0;
 
+    // State of cat being on top of the head
+    public bool onTopOfHead = false;
+
     // Sound effect
     public AudioSource soundEffect;
 
@@ -33,7 +36,7 @@ public class CatBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // If cat on top of hand:
         if (onTopOfHand && numHits >=1)
@@ -76,12 +79,14 @@ public class CatBehaviour : MonoBehaviour
             // Move cat to top of face
             transform.position = sleepingHead.transform.position + new Vector3(0, headThickness, zOffsetToHand);
 
-            // Play sound effect
-            soundEffect.Play();
+            //// Play sound effect
+            //soundEffect.Play();
 
             // Make cat meow a LOT
             //soundEffect.loop = true;
             //soundEffect.Play();
+
+            onTopOfHead = true;
 
             Debug.Log("close to head");
 
@@ -92,6 +97,8 @@ public class CatBehaviour : MonoBehaviour
             //soundEffect.Stop();
             //soundEffect.loop = false;
             Debug.Log("no head");
+
+            onTopOfHead = false;
         }
     }
 

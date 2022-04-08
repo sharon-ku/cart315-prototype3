@@ -8,6 +8,13 @@ public class SleepingHead : MonoBehaviour
 
     // Sound effect
     public AudioSource soundEffect;
+    public AudioSource sneezeSoundEffect;
+
+    // Store whether cat is on head (need to fetch info from CatBehaviour script)
+    private bool thisCatOnHead = false;
+
+    // Number of times head sneezed
+    private float numSneezes = 0;
 
     // Sound effect
     public AudioSource snoreSound;
@@ -17,15 +24,38 @@ public class SleepingHead : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Play nore esound
+        // Play snore sound
+        
         snoreSound.Play();
-        // snoreSound.PlayOneShot(snoreSound.clip);
+            // snoreSound.PlayOneShot(snoreSound.clip);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        GameObject go = GameObject.Find("Cat");
+        CatBehaviour catBehaviour = go.GetComponent<CatBehaviour>();
+        CatBehaviour cs = catBehaviour;
+        thisCatOnHead = cs.onTopOfHead;
+
+        if (thisCatOnHead && numSneezes < 1)
+        {
+            //// Stop snoring
+            //snoreSound.Stop();
+            //snoreSound.loop = false;
+
+            // Play sneezing
+            sneezeSoundEffect.Play();
+
+            Debug.Log("cat on head");
+            
+            // Increase 1 sneeze
+            numSneezes++;
+            
+            
+        }
+
+
     }
 
     private void OnCollisionEnter(Collision collision)
